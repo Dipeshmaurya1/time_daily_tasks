@@ -1,20 +1,8 @@
-# time_daily_tasks
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
+# Buttons Task
+<p>
+<img src="https://github.com/Dipeshmaurya1/time_daily_tasks/assets/149373441/ab4d1d46-db0d-4024-b135-fe6b1f20ec9d" width=22% height=35%>
+</P>
 
 # 1.What is  Asynchronous Programming?
 
@@ -114,4 +102,15 @@ void main()
         // In Every 3 Seconds of Delay the Massage in print('') will be Execute..
 }
 ```
+# Clock App Task
+<p>
+<img src="https://github.com/Dipeshmaurya1/time_daily_tasks/assets/149373441/9daeef64-d8e9-4d2e-8495-68f5930560a7" width=22% height=35%>
+</P>
+<p>
+<video src="https://github.com/Dipeshmaurya1/time_daily_tasks/assets/149373441/35872135-0bec-432b-b5bf-c27da6e1bcbf" width=22% height=35%>
+</P>
+
+
+
+
 
