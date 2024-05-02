@@ -70,8 +70,8 @@ class _ClockAppState extends State<ClockApp> {
           decoration: BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
-              image: NetworkImage(
-                  'https://st.depositphotos.com/27201292/53650/i/450/depositphotos_536500110-stock-photo-vertical-shot-milky-way-starry.jpg'),
+              image: AssetImage(
+                  'Assets/Image/ClockBG.jpg'),
             ),
           ),
           child: SizedBox(
@@ -132,21 +132,21 @@ class _ClockAppState extends State<ClockApp> {
                       ),
                       ...List.generate(
                         60,
-                        (index) => Transform.rotate(
+                            (index) => Transform.rotate(
                             angle: ((index + 1) * 6 * pi) / 180,
                             child: ((index + 1) % 5 == 0)
                                 ? VerticalDivider(
-                                    thickness: 2,
-                                    color: Colors.white,
-                                    endIndent: 180,
-                                    indent: 1,
-                                  )
+                              thickness: 2,
+                              color: Colors.white,
+                              endIndent: 180,
+                              indent: 1,
+                            )
                                 : VerticalDivider(
-                                    thickness: 2,
-                                    color: Colors.blue,
-                                    endIndent: 185,
-                                    indent: 1,
-                                  )),
+                              thickness: 2,
+                              color: Colors.blue,
+                              endIndent: 185,
+                              indent: 1,
+                            )),
                       ),
                       Transform.rotate(
                         angle: (CurrentTime.hour % 12 + CurrentTime.minute / 60) *

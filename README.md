@@ -1,8 +1,17 @@
 
-# Buttons Task
-<p>
+<h3 align = "center">Button Task</h3>
+<p align = "center">
 <img src="https://github.com/Dipeshmaurya1/time_daily_tasks/assets/149373441/ab4d1d46-db0d-4024-b135-fe6b1f20ec9d" width=22% height=35%>
 </P>
+<h3 align = "center">Digital Clock</h3>
+<p align = "center">
+<img src="https://github.com/Dipeshmaurya1/time_daily_tasks/assets/149373441/9daeef64-d8e9-4d2e-8495-68f5930560a7" width=22% height=35%>
+</P>
+<div align = "center">
+<video src="https://github.com/Dipeshmaurya1/time_daily_tasks/assets/149373441/eeb42ba3-2883-414b-bfb1-bde612f22d8c" width=22% height=35%>
+</div>
+
+
 
 # 1.What is  Asynchronous Programming?
 
@@ -102,13 +111,6 @@ void main()
         // In Every 3 Seconds of Delay the Massage in print('') will be Execute..
 }
 ```
-# Clock App Task
-<p>
-<img src="https://github.com/Dipeshmaurya1/time_daily_tasks/assets/149373441/9daeef64-d8e9-4d2e-8495-68f5930560a7" width=22% height=35%>
-</P>
-<p>
-<video src="https://github.com/Dipeshmaurya1/time_daily_tasks/assets/149373441/35872135-0bec-432b-b5bf-c27da6e1bcbf" width=22% height=35%>
-</P>
 
 
 
