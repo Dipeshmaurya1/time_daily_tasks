@@ -109,6 +109,7 @@ class _ClockAppState extends State<ClockApp> {
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
                 ),
+                SizedBox(height: 30,),
                 Container(
                   height: 200,
                   width: 200,
@@ -135,16 +136,16 @@ class _ClockAppState extends State<ClockApp> {
                             angle: ((index + 1) * 6 * pi) / 180,
                             child: ((index + 1) % 5 == 0)
                                 ? VerticalDivider(
-                                    thickness: 3,
-                                    color: Colors.red,
-                                    endIndent: 170,
-                                    indent: 2,
-                                  )
-                                : VerticalDivider(
                                     thickness: 2,
                                     color: Colors.white,
                                     endIndent: 180,
-                                    indent: 3,
+                                    indent: 1,
+                                  )
+                                : VerticalDivider(
+                                    thickness: 2,
+                                    color: Colors.blue,
+                                    endIndent: 185,
+                                    indent: 1,
                                   )),
                       ),
                       Transform.rotate(
@@ -154,7 +155,7 @@ class _ClockAppState extends State<ClockApp> {
                             180,
                         child: VerticalDivider(
                           thickness: 4,
-                          color: Colors.deepOrange.shade500,
+                          color: Colors.orangeAccent,
                           endIndent: 97,
                           indent: 40,
                         ),
@@ -164,8 +165,8 @@ class _ClockAppState extends State<ClockApp> {
                         child: VerticalDivider(
                           thickness: 3,
                           color: Colors.amber,
-                          endIndent: 95,
-                          indent: 29,
+                          endIndent: 96,
+                          indent: 26,
                         ),
                       ),
                       Transform.rotate(
