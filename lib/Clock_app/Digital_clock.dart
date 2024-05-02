@@ -63,42 +63,44 @@ class _ClockAppState extends State<ClockApp> {
 
       });
     });
-    return Scaffold(
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: NetworkImage('https://st.depositphotos.com/27201292/53650/i/450/depositphotos_536500110-stock-photo-vertical-shot-milky-way-starry.jpg'),
+    return SafeArea(
+      child: Scaffold(
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              fit: BoxFit.cover,
+              image: NetworkImage('https://st.depositphotos.com/27201292/53650/i/450/depositphotos_536500110-stock-photo-vertical-shot-milky-way-starry.jpg'),
+            ),
           ),
-        ),
-        child: SizedBox(
-          height: 50,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(Icons.access_time_outlined,color: Colors.white,size: 50,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    '${CurrentTime.hour}:${CurrentTime.minute}:${CurrentTime.second}',
-                    style: TextStyle(
-                        fontSize: 50,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  ),
-                  Container(
-                      margin: EdgeInsets.only(top: 12.0),
-                      child: Text(
-                        '${meridian}',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
-                      )),
-                ],
-              ),
-              Text('${Day}',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),),
-            ],
+          child: SizedBox(
+            height: 50,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.access_time_outlined,color: Colors.white,size: 50,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      '${CurrentTime.hour}:${CurrentTime.minute}:${CurrentTime.second}',
+                      style: TextStyle(
+                          fontSize: 50,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                    Container(
+                        margin: EdgeInsets.only(top: 12.0),
+                        child: Text(
+                          '${meridian}',
+                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        )),
+                  ],
+                ),
+                Text('${Day}',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),),
+              ],
+            ),
           ),
         ),
       ),
