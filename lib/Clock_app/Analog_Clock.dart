@@ -12,21 +12,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: ClockApp(),
-    );
+    return const Placeholder();
   }
 }
-
-class ClockApp extends StatefulWidget {
-  const ClockApp({super.key});
+class Analog extends StatefulWidget {
+  const Analog({super.key});
 
   @override
-  State<ClockApp> createState() => _ClockAppState();
+  State<Analog> createState() => _AnalogState();
 }
 
-class _ClockAppState extends State<ClockApp> {
+class _AnalogState extends State<Analog> {
   @override
   Widget build(BuildContext context) {
     Timer.periodic(Duration(seconds: 1), (timer) {
@@ -189,7 +185,7 @@ class _ClockAppState extends State<ClockApp> {
     );
   }
 }
-
 DateTime CurrentTime = DateTime.now();
 String meridian = '';
 String Day = '';
+
