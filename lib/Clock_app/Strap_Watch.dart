@@ -134,7 +134,7 @@ class _StrapWatchState extends State<StrapWatch> {
                       height: 240,
                       width: 240,
                       child: CircularProgressIndicator(
-                        color: Colors.cyanAccent,
+                        color: Colors.deepOrange,
                         value: CurrentTime.second / 60,
                         strokeWidth: 5,
                       ),
@@ -143,7 +143,7 @@ class _StrapWatchState extends State<StrapWatch> {
                       height: 220,
                       width: 220,
                       child: CircularProgressIndicator(
-                        color: Colors.deepOrange,
+                        color: Colors.green,
                         value:
                             ((CurrentTime.hour % 12 + CurrentTime.minute / 60) /
                                 12),
@@ -154,7 +154,7 @@ class _StrapWatchState extends State<StrapWatch> {
                       height: 230,
                       width: 230,
                       child: CircularProgressIndicator(
-                        color: Colors.amber,
+                        color: Colors.white,
                         value: CurrentTime.minute / 60,
                         strokeWidth: 7,
                       ),
@@ -207,6 +207,15 @@ class _StrapWatchState extends State<StrapWatch> {
                   ],
                 ),
               ),
+              SizedBox(height: 50,),
+              Container(
+                height: 50,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              )
             ],
           ),
         ),
