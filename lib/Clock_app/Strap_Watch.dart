@@ -9,21 +9,6 @@ import 'package:flutter/widgets.dart';
 import 'package:time_daily_tasks/Flutter%20Buttons/Button_Tasks.dart';
 import 'package:time_daily_tasks/main.dart';
 
-void main() {
-  runApp(ClockApp());
-}
-
-class ClockApp extends StatelessWidget {
-  const ClockApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: StrapWatch(),
-    );
-  }
-}
 
 class StrapWatch extends StatefulWidget {
   const StrapWatch({super.key});
@@ -108,6 +93,7 @@ class _StrapWatchState extends State<StrapWatch> {
     });
     return SafeArea(
       child: Scaffold(
+        
         body: Container(
           height: double.infinity,
           width: double.infinity,
@@ -120,19 +106,20 @@ class _StrapWatchState extends State<StrapWatch> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
+              SizedBox(height: 150,),
               Container(
                 height: 250,
                 width: 250,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(color: Colors.white, width: 0.01),
-                ),
+                // decoration: BoxDecoration(
+                //   shape: BoxShape.circle,
+                //   border: Border.all(color: Colors.white, width: 0.01),
+                // ),
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
                     SizedBox(
-                      height: 240,
-                      width: 240,
+                      height: 241,
+                      width: 241,
                       child: CircularProgressIndicator(
                         color: Colors.deepOrange,
                         value: CurrentTime.second / 60,
@@ -156,7 +143,7 @@ class _StrapWatchState extends State<StrapWatch> {
                       child: CircularProgressIndicator(
                         color: Colors.white,
                         value: CurrentTime.minute / 60,
-                        strokeWidth: 7,
+                        strokeWidth: 5.5,
                       ),
                     ),
                     Column(
@@ -203,19 +190,30 @@ class _StrapWatchState extends State<StrapWatch> {
                           ],
                         )
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
-              SizedBox(height: 50,),
+              SizedBox(height: 150,),
               Container(
-                height: 50,
+                height: 100,
                 width: double.infinity,
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white),
-                  borderRadius: BorderRadius.circular(10),
+
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    ElevatedButton(onPressed: (){
+                      Navigator.pushNamed(context, '/digital');
+                    }, child: Text('Digital'),),
+                    ElevatedButton(onPressed: (){
+                      Navigator.pushNamed(context, '/analog');
+                    }, child: Text('Analog'),),
+                    ElevatedButton(onPressed: (){
+                      Navigator.pushNamed(context, '/strap');
+                    }, child: Text('Strap'),),
+                  ],
                 ),
-              )
+              ),
             ],
           ),
         ),

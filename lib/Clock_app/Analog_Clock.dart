@@ -3,18 +3,6 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
 class Analog extends StatefulWidget {
   const Analog({super.key});
 
@@ -75,37 +63,7 @@ class _AnalogState extends State<Analog> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
-                  Icons.access_time_outlined,
-                  color: Colors.white,
-                  size: 50,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      '${CurrentTime.hour}:${CurrentTime.minute}:${CurrentTime.second}',
-                      style: TextStyle(
-                          fontSize: 50,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    ),
-                    Container(
-                        margin: EdgeInsets.only(top: 12.0),
-                        child: Text(
-                          '${meridian}',
-                          style: TextStyle(fontSize: 20, color: Colors.white),
-                        )),
-                  ],
-                ),
-                Text(
-                  '${Day}',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ),
-                SizedBox(height: 30,),
+                SizedBox(height: 200,),
                 Container(
                   height: 200,
                   width: 200,
@@ -176,7 +134,26 @@ class _AnalogState extends State<Analog> {
                       ),
                     ],
                   ),
-                )
+                ),
+                SizedBox(height: 180,),
+                Container(
+                  height: 100,
+                  width: double.infinity,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      ElevatedButton(onPressed: (){
+                        Navigator.pushNamed(context, '/digital');
+                      }, child: Text('Digital'),),
+                      ElevatedButton(onPressed: (){
+                        Navigator.pushNamed(context, '/analog');
+                      }, child: Text('Analog'),),
+                      ElevatedButton(onPressed: (){
+                        Navigator.pushNamed(context, '/strap');
+                      }, child: Text('Strap'),),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
