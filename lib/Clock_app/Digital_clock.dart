@@ -2,18 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return DigitalClock();
-  }
-}
 class DigitalClock extends StatefulWidget {
   const DigitalClock({super.key});
 
@@ -75,6 +63,7 @@ class _DigitalClockState extends State<DigitalClock> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                SizedBox(height: 200,),
                 Icon(Icons.access_time_outlined,color: Colors.white,size: 50,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -95,6 +84,25 @@ class _DigitalClockState extends State<DigitalClock> {
                   ],
                 ),
                 Text('${Day}',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),),
+                SizedBox(height: 220,),
+                Container(
+                  height: 100,
+                  width: double.infinity,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      ElevatedButton(onPressed: (){
+                        Navigator.pushNamed(context, '/digital');
+                      }, child: Text('Digital'),),
+                      ElevatedButton(onPressed: (){
+                        Navigator.pushNamed(context, '/analog');
+                      }, child: Text('Analog'),),
+                      ElevatedButton(onPressed: (){
+                        Navigator.pushNamed(context, '/strap');
+                      }, child: Text('Strap'),),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
